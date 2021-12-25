@@ -55,8 +55,6 @@ public class Game {
         }
         switchSide();
         System.out.println("Game Over! "+checkSide(player)+" WON!!!");
-
-
     }
 
 }

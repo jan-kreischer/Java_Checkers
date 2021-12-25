@@ -17,11 +17,11 @@ public class GUIBoard extends JFrame implements MouseListener, MouseMotionListen
     int num = 0;
     public static List<Integer> input = new ArrayList<Integer>();
     //add piece
-    static ImageIcon redPawn = new ImageIcon("src/images/redPawnImage.png"); // add an image here
-    static ImageIcon whitePawn = new ImageIcon("src/images/whitePawnImage.png");
-    static ImageIcon redKing = new ImageIcon("src/images/redKingImage.png");
-    static ImageIcon whiteKing = new ImageIcon("src/images/whiteKingImage.png");
-    JButton backButton;
+    static ImageIcon redPawn = new ImageIcon("src/images/red_pawn.png");
+    static ImageIcon whitePawn = new ImageIcon("src/images/white_pawn.png");
+    static ImageIcon redKing = new ImageIcon("src/images/red_king.png");
+    static ImageIcon whiteKing = new ImageIcon("src/images/white_king.png");
+    //JButton backButton;
 
     private static GUIBoard uniqueInstance;
 
@@ -42,10 +42,10 @@ public class GUIBoard extends JFrame implements MouseListener, MouseMotionListen
         //size of the window
         Dimension boardSize = new Dimension(640, 640);
         // withdraw button
-        backButton = new JButton("Back");
-        backButton.setBounds(700,50,100,50);
-        backButton.addActionListener(this);
-        backButton.setFocusable(false);
+        //backButton = new JButton("Back");
+        //backButton.setBounds(700,50,100,50);
+        //backButton.addActionListener(this);
+        //backButton.setFocusable(false);
 
         //add a layered pane
         layeredPane = new JLayeredPane();
@@ -60,7 +60,7 @@ public class GUIBoard extends JFrame implements MouseListener, MouseMotionListen
         chessBoard.setPreferredSize(boardSize);
         chessBoard.setBounds(0, 0, boardSize.width, boardSize.height);
         layeredPane.add(chessBoard, JLayeredPane.DEFAULT_LAYER);
-        layeredPane.add(backButton, JLayeredPane.DEFAULT_LAYER);
+        //layeredPane.add(backButton, JLayeredPane.DEFAULT_LAYER);
 
         //draw the board
         for (int i = 0; i < 8; i++) {
@@ -90,10 +90,9 @@ public class GUIBoard extends JFrame implements MouseListener, MouseMotionListen
         }
         }
         }
-
-
-        this.setTitle("Group 19 Checkers Game");
-        this.setSize(850, 680);
+        
+        this.setTitle("Checkers");
+        this.setSize(640, 680);
         this.setBackground(Color.white);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
@@ -241,11 +240,11 @@ public class GUIBoard extends JFrame implements MouseListener, MouseMotionListen
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource()==backButton){
+        /*if(e.getSource()==backButton){
             Board.getLastBoard();
             Board.notifyAllObservers();
 
-        }
+        }*/
     }
 
 //        this.add(PiecePanel);
