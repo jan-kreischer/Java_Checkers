@@ -90,7 +90,7 @@ public class GUIBoard extends JFrame implements MouseListener, MouseMotionListen
         }
         }
         }
-        
+
         this.setTitle("Checkers");
         this.setSize(640, 680);
         this.setBackground(Color.white);
